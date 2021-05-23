@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "NutritionApp"
+  "defaultProject": "NutritionApp",
+  "cli": {
+    "analytics": false
+  }
 }

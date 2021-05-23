@@ -1,0 +1,37 @@
+<h1 style="text-align: center; color: #81b214; margin-top: 30px;">BMI CALCULATOR</h1>
+
+<div class="row" style="margin-top: 70px;">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <form class="form-group" #bmi="ngForm" (ngSubmit) = "onClickSubmit(bmi.value)">
+                    <label for="height">HEIGHT (in cms): </label>
+                    <input class="form-control" name="height" type="text" style="margin-top: 5px;" ngModel>
+                    <br>
+                    <label for="weight">WEIGHT (in kgs): </label>
+                    <input class="form-control" name="weight" type="text" style="margin-top: 5px;" ngModel>
+                    <br>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px; background-color: #81b214;">CALCULATE BMI</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 style="text-align: center; color: #81b214; margin-top: 10px;">BMI REPORT</h4>
+                <div class="row" style="padding-top: 30px;">
+                    <div class="col-sm-6" style="padding-left: 50px;">
+                        <p>YOUR BODY MASS INDEX VALUE: </p>
+                        <p>YOUR WEIGHT CATEGORY: </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>{{bmiResult}}</p>
+                        <p>{{category}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

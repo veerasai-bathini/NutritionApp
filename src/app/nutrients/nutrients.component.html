@@ -1,0 +1,56 @@
+<form action="" #tray="ngForm" class="form-group">
+  <div class="row" style="margin-top: 50px;">
+    <div class="col-md-6">
+      <input type="text" name="item" id="item" class="form-control" ngModel />
+    </div>
+    <div class="col-md-6">
+      <button
+        class="btn"
+        (click)="onClickAdd(tray.value)"
+        style="background-color: #81b214; color: white; margin: 0px 3px"
+      >
+        ADD
+      </button>
+      <button
+        class="btn"
+        (click)="onClickSubmit()"
+        style="background-color: #81b214; color: white; margin: 0px 3px"
+      >
+        SUBMIT TRAY
+      </button>
+      <button
+        class="btn"
+        (click)="onClickReset()"
+        style="background-color: #81b214; color: white; margin: 0px 3px"
+      >
+        RESET
+      </button>
+    </div>
+  </div>
+</form>
+<br />
+<p>Items in your Tray: {{ itemCount }}</p>
+<hr />
+
+<h4 class="text-center" style="color: #81b214;">NUTRITION REPORT</h4>
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Food Item</th>
+        <th>Calories</th>
+        <th>Carbohydrates (g)</th>
+        <th>Proteins (g)</th>
+        <th>Fats (g)</th>
+        <th>Fiber (g)</th>
+        <th>Cholesterol (g)</th>
+    </tr>
+    <tr *ngFor="let item of nutritionReport">
+      <td>{{item.name}}</td>
+      <td>{{item.calories}}</td>
+      <td>{{item.carbohydrates_total_g}}</td>
+      <td>{{item.protein_g}}</td>
+      <td>{{item.fat_total_g}}</td>
+      <td>{{item.fiber_g}}</td>
+      <td>{{item.cholesterol_mg}}</td>
+    </tr> 
+</table>
